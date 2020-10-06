@@ -12,14 +12,16 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { RouterModule} from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSelectModule,
     BrowserAnimationsModule,
     // MatButtonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule.forRoot([
+      {
+        path: 'home',
+        component: HomeComponent
+      }
+    ])
 
 
   ],
